@@ -16,7 +16,7 @@ SRE 初心者として習得しなければならない基本的なスキルセ�
 このコースでは、強力な基礎スキルの構築に重点を置いています。このコースは、より多くの実例を提供するよう作られており、これらの各トピックを学習することが、SRE の日常の職責においてどのように重要な役割を果たすことができるかを示しています。現在、私たちは SRE の学び舎の下で以下のトピックをカバーしています。(訳注: タイトルが日本語になっている箇所についてのみ翻訳済)
 
 -   Level 101
-    -   基礎シリーズ
+    -   基本シリーズ
         -   [Linux の基礎](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/intro/)
         -   [Git](https://linkedin.github.io/school-of-sre/level101/git/git-basics/)
         -   [Linux Networking](https://linkedin.github.io/school-of-sre/level101/linux_networking/intro/)

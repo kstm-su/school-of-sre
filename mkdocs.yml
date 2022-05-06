@@ -1,5 +1,5 @@
-site_url: https://linkedin.github.io/school-of-sre/
-site_name: School Of SRE
+site_url: https://kstm.shinshu-u.ac.jp/school-of-sre/
+site_name: SRE の学び舎 (Linkedin School of SRE 日本語翻訳)
 docs_dir: courses
 theme:
   name: material
@@ -11,9 +11,9 @@ extra_css:
 nav:
 - Home: index.md
 - Level 101:
-    - Fundamentals Series:
-        - Linux Basics:
-            - Introduction: level101/linux_basics/intro.md
+    - 基本シリーズ:
+        - Linux の基礎:
+            - はじめに: level101/linux_basics/intro.md
             - Command Line Basics: level101/linux_basics/command_line_basics.md
             - Server Administration: level101/linux_basics/linux_server_administration.md
             - Conclusion: level101/linux_basics/conclusion.md
@@ -131,8 +131,8 @@ nav:
 - Contribute: CONTRIBUTING.md
 - Code of Conduct: CODE_OF_CONDUCT.md
 - SRE Community: sre_community.md
-copyright: "Copyright 2020 LinkedIn Corporation. All Rights Reserved. Licensed under the Creative Commons Attribution 4.0 International Public License"
+copyright: "Licensed under the Creative Commons Attribution 4.0 International Public License"
 extra:
     social:
         - icon: fontawesome/brands/github
-          link: https://github.com/linkedin/school-of-sre
+          link: https://github.com/kstm-su/school-of-sre
