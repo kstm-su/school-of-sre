@@ -1,18 +1,20 @@
-# School of SRE
+# SREの学び舎
 
 <img src="img/sos.png" width=200 >
 
-Site Reliability Engineers (SREs)  sits at the intersection of software engineering and systems engineering. While there are potentially infinite permutations and combinations of how infrastructure and software components can be put together to achieve an objective, focusing on foundational skills allows SREs to work with complex systems and software, regardless of whether these systems are proprietary, 3rd party, open systems, run on cloud/on-prem infrastructure, etc. Particularly important is to gain a deep understanding of how these areas of systems and infrastructure relate to each other and interact with each other. The combination of software and systems engineering skills is rare and is generally built over time with exposure to a wide variety of infrastructure, systems, and software. 
+SRE (Site Reliability Engineers: サイト信頼性エンジニア) は、ソフトウェアエンジニアリングとシステムエンジニアリングの交わる部分に位置しています。インフラストラクチャとソフトウェアコンポーネントを組み合わせて目的を達成する方法には、無限の並び替え方や選び方がある可能性がありますが、基本的なスキルに焦点を当て、理解することで、これらのシステムがプロプライエタリであるか、サードパーティ製であるか、オープンソースであるか、クラウド/オンプレミスのインフラストラクチャで実行されているかなどに関係なく、SRE は複雑なシステムやソフトウェアを操作できるようになります。ここで重要なのは、システムとインフラストラクチャの領域が相互にどのように関連し、相互作用するかを深く理解することです。特定のソフトウェアとシステムエンジニアリングスキルの組み合わせはまれであり、一般に、さまざまなインフラストラクチャ、システム、およびソフトウェアにさらされながら時間をかけて構築されます。
 
-SREs bring in engineering practices to keep the site up. Each distributed system is an agglomeration of many components. SREs validate business requirements, convert them to SLAs for each of the components that constitute the distributed system, monitor and measure adherence to SLAs, re-architect or scale out to mitigate or avoid SLA breaches, add these learnings as feedback to new systems or projects and thereby reduce operational toil. Hence SREs play a vital role right from the day 0 design of the system. 
 
-In early 2019, we started visiting campuses across India to recruit the best and brightest minds to make sure LinkedIn, and all the services that make up its complex technology stack are always available for everyone. This critical function at LinkedIn falls under the purview of the Site Engineering team and Site Reliability Engineers (SREs) who are Software Engineers, specialized in reliability. 
 
-As we continued on this journey we started getting a lot of questions from these campuses on what exactly the site reliability engineering role entails? And, how could someone learn the skills and the disciplines involved to become a successful site reliability engineer? Fast forward a few months, and a few of these campus students had joined LinkedIn either as interns or as full-time engineers to become a part of the Site Engineering team; we also had a few lateral hires who joined our organization who were not from a traditional SRE background. That's when a few of us got together and started to think about how we can onboard new graduate engineers to the Site Engineering team.
+SREは、サイトを稼働させ続けるためのエンジニアリング手法を利用します。それぞれの分散システムは、多くのコンポーネントの集合体です。SRE は、ビジネス上の要件の検証、分散システムを構成する各コンポーネントの SLA (Service Level Agreement: サービス品質保証) 設定、SLA の準拠の監視と測定、SLA 違反を軽減または回避するための再設計またはスケールアウト、これらの学びを新しいシステムまたはプロジェクトへフィードバック、それによる運用作業の軽減を行います。したがって、SRE はシステムの設計初期から重要な役割を果たします。
 
-There are very few resources out there guiding someone on the basic skill sets one has to acquire as a beginner SRE. Because of the lack of these resources, we felt that individuals have a tough time getting into open positions in the industry. We created the School Of SRE as a starting point for anyone wanting to build their career as an SRE.
-In this course, we are focusing on building strong foundational skills. The course is structured in a way to provide more real life examples and how learning each of these topics can play an important role in day to day job responsibilities of an SRE. Currently we are covering the following topics under the School Of SRE:
- 
+2019年の初め、私たちは最も優秀な人材を採用するため、また、LinkedIn とその複雑なテクノロジースタックを構成するすべてのサービスを誰もがいつでも利用できるようにするため、インド各地のキャンパスを訪問し始めました。LinkedIn の維持するこの重要な機能・サービスは、サイトエンジニアリングチームと、信頼性を専門とするソフトウェアエンジニアであるサイト信頼性エンジニア (SRE) の管轄下にあります。
+
+この旅を続けるうちに、サイト信頼性エンジニアリングの役割には具体的に何が必要なのか? サイト信頼性エンジニアとして成功するために必要なスキルと分野・ルールを学ぶにはどうすればよいか? といった質問が、これらのキャンパスから多く寄せられるようになりました。数ヶ月後、これらのキャンパスの学生の何人かは、インターンとして、またはサイトエンジニアリングチームの一員になるためフルタイムのエンジニアとして LinkedIn に参加していました。また、従来の SRE 出身ではない、組織に参加したいくつかのラテラル採用 (同業他社からの中途採用) もありました。その時、私たちの何人かが集まって、どうすれば新卒エンジニアをサイトエンジニアリングチームに迎え入れることができるかを考え始めました。
+
+SRE 初心者として習得しなければならない基本的なスキルセットについて、指導するリソースはあまり出回っていません。これらのリソースが不足しているため、個人が業界のスタート地点に入るのは難しいと感じました。私たちは、SRE としてのキャリアを築きたいと思っている人のための出発点として、SRE の学び舎を設立しました。
+このコースでは、強力な基礎スキルの構築に重点を置いています。このコースは、より多くの実例を提供するよう作られており、これらの各トピックを学習することが、SRE の日常の職責においてどのように重要な役割を果たすことができるかを示しています。現在、私たちは SRE の学び舎の下で以下のトピックをカバーしています。(訳注: タイトルが日本語になっている箇所についてのみ翻訳済)
+
 -   Level 101
     -   Fundamentals Series
         -   [Linux Basics](https://linkedin.github.io/school-of-sre/level101/linux_basics/intro/)
@@ -37,6 +39,20 @@ In this course, we are focusing on building strong foundational skills. The cour
     -   [System troubleshooting and performance improvements](https://linkedin.github.io/school-of-sre/level102/system_troubleshooting_and_performance/introduction/) 
     -   [Continuous Integration and Continuous Delivery](https://linkedin.github.io/school-of-sre/level102/continuous_integration_and_continuous_delivery/introduction/)
 
-We believe continuous learning will help in acquiring deeper knowledge and competencies in order to expand your skill sets, every module has added references that could be a guide for further learning. Our hope is that by going through these modules we should be able to build the essential skills required for a Site Reliability Engineer.
+継続的な学習は、スキルセットを拡大するために、より深い知識とスキル・能力を獲得するのに役立つと考えています。すべてのモジュールには、さらに学習するためのガイドとなるリファレンスが追加されています。これらのモジュールを使用することで、Site Reliability Engineer に必要な基本的なスキルを構築できることを望んでいます。
 
-At LinkedIn, we are using this curriculum for onboarding our non-traditional hires and new college grads into the SRE role. We had multiple rounds of successful onboarding experiences with new employees and the course helped them be productive in a very short period of time. This motivated us to open source the content for helping other organizations in onboarding new engineers into the role and provide guidance for aspiring individuals to get into the role. We realize that the initial content we created is just a starting point and we hope that the community can help in the journey of refining and expanding the content. Check out [the contributing guide](./CONTRIBUTING.md) to get started.
+LinkedInではこのカリキュラムを使用し、従来とは異なる採用者や新卒者を SRE として迎え入れています。私たちは、新しい従業員との成功したオンボーディング経験 (新人研修) を何度も経験し、このコースは彼らが非常に短期間で生産的になるのに役立ちました。そこで、他の組織が新しいエンジニアを SRE の役職に追加するのを支援するためのコンテンツをオープンソース化し、これに参加する意欲のある個人へのガイダンスを提供することにしました。私達が作成した最初のコンテンツは出発点に過ぎず、コミュニティがコンテンツの洗練と発展に協力できることを願っています。詳しくは本リポジトリの [コントリビュートに関するガイド](./CONTRIBUTING.md) を参照してください。
+
+
+
+### 日本語翻訳について
+
+本リポジトリ([kstm-su/school-of-sre](https://github.com/kstm-su/school-of-sre))  は、オリジナルの School of SRE リポジトリのフォークであり、信州大学の情報系サークルである kstm 所属の学生により翻訳がされています。kstm は信州大学の公認サークルではありますが、本リポジトリの内容については大学とは関係ありませんので、大学へのお問い合わせ等はお控えいただけますよう、お願いいたします。
+
+kstm 所属学生以外からの issue/PR も受け付けています。それ以外の問い合わせについては、twitter@kstm_ までお願いいたします。
+
+日本語翻訳については、原文の内容を損なわない程度に、日本語における意味・技術的内容が伝わりやすくなるような改変を一部行っている箇所があります。
+
+本リポジトリの内容は、オリジナルと同様 Creative Commons「表示」4.0 国際ライセンス下で提供されています。
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
