@@ -1,103 +1,86 @@
-# Linux Basics
+# Linux の基礎
 
-## Introduction
-### Prerequisites
+## はじめに
+### このコースの前提
 
-- Should be comfortable in using any operating systems like Windows, Linux or Mac
-- Expected to have fundamental knowledge of operating systems
+- Windows, Linux, Mac など、任意の OS を快適に利用できるスキル
+- オペレーティングシステムに関する基本的な知識を持っていることが期待されています
 
-## What to expect from this course
+## このコースで期待されること
 
-This course is divided into three parts. In the first part, we cover the
-fundamentals of Linux operating systems. We will talk about Linux architecture,
-Linux distributions and uses of Linux operating systems. We will also talk about the
-difference between GUI and CLI.
+本コースは3つの部分に別れています。最初の部分では、Linux オペレーションシステムの基礎についてをカバーします。Linux のアーキテクチャ、Linux ディストリビューション、Linux オペレーティングシステムの利用について説明します。また、GUI と CLI の違いについても説明します。
 
-In the second part, we cover some basic commands used in Linux. 
-We will focus on commands used for navigating the file system, viewing and manipulating files,
-I/O redirection etc.
 
-In the third part, we cover Linux system administration. This includes day to day tasks 
-performed by Linux admins, like managing users/groups, managing file permissions, 
-monitoring system performance, log files etc.
 
-In the second and third part, we will be taking examples to understand the concepts.
+第2部では、Linux で使用される基本的なコマンドについて説明します。
 
-## What is not covered under this course
+ここでは、ファイルシステムの移動、ファイルの表示と操作、I/O リダイレクトなどに使用されるコマンドについて説明します。
 
-We are not covering advanced Linux commands and bash scripting in this
-course. We will also not be covering Linux internals. 
 
-## Course Contents
 
-The following topics has been covered in this course:
+第3部では、Linux におけるシステム管理について説明します。これには、ユーザー/グループの管理、ファイルのアクセス許可の管理、システムパフォーマンスの監視、ログファイルなど、Linux の管理者が実行する日常的なタスクが含まれます。
 
--  [Introduction to Linux](https://linkedin.github.io/school-of-sre/level101/linux_basics/intro/)
-    -  [What are Linux Operating Systems](https://linkedin.github.io/school-of-sre/level101/linux_basics/intro/#what-are-linux-operating-systems)
-    -  [What are popular Linux distributions](https://linkedin.github.io/school-of-sre/level101/linux_basics/intro/#what-are-popular-linux-distributions)
-    -  [Uses of Linux Operating Systems](https://linkedin.github.io/school-of-sre/level101/linux_basics/intro/#uses-of-linux-operating-systems)
-    -  [Linux Architecture](https://linkedin.github.io/school-of-sre/level101/linux_basics/intro/#linux-architecture)
-    -  [Graphical user interface (GUI) vs Command line interface (CLI)](https://linkedin.github.io/school-of-sre/level101/linux_basics/intro/#graphical-user-interface-gui-vs-command-line-interface-cli)
--  [Command Line Basics](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/)
-    -  [Lab Environment Setup](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#lab-environment-setup)
-    -  [What is a Command](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#what-is-a-command)
-    -  [File System Organization](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#file-system-organization)
-    -  [Navigating File System](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#commands-for-navigating-the-file-system)
-    -  [Manipulating Files](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#commands-for-manipulating-files)
-    -  [Viewing Files](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#commands-for-viewing-files)
-    -  [Echo Command](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#echo-command)
-    -  [Text Processing Commands](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#text-processing-commands)
-    -  [I/O Redirection](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#io-redirection)
--  [Linux system administration](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/)
-    -  [Lab Environment Setup](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#lab-environment-setup)
-    -  [User/Groups management](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#usergroup-management)
-    -  [Becoming a Superuser](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#becoming-a-superuser)
-    -  [File Permissions](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#file-permissions)
-    -  [SSH Command](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#ssh-command)
-    -  [Package Management](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#package-management)
-    -  [Process Management](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#process-management)
-    -  [Memory Management](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#memory-management)
-    -  [Daemons and Systemd](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#daemons)
-    -  [Logs](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#logs)
--  [Conclusion](https://linkedin.github.io/school-of-sre/level101/linux_basics/conclusion)
-    -  [Applications in SRE Role](https://linkedin.github.io/school-of-sre/level101/linux_basics/conclusion/#applications-in-sre-role)
-    -  [Useful Courses and tutorials](https://linkedin.github.io/school-of-sre/level101/linux_basics/conclusion/#useful-courses-and-tutorials)
+第2部と第3部では、概念を理解するために例を取り上げます。
 
-## What are Linux operating systems
+## このコースではカバーしない内容
 
-Most of us are familiar with the Windows operating system used in more than
- 75% of the personal computers. The Windows operating systems
-are based on Windows NT kernel. 
+本コースでは、高度な Linux コマンドと bash スクリプトについては説明しません。また、Linux の内部的な話についても取り上げません。
 
-A kernel is the most important part of
-an operating system - it performs important functions like process
-management, memory management, filesystem management etc.
+## コースの内容
 
-Linux operating systems are based on the Linux kernel. A Linux based
-operating system will consist of Linux kernel, GUI/CLI, system libraries
-and system utilities. The Linux kernel was independently developed and
-released by Linus Torvalds. The Linux kernel is free and open-source -
-[https://github.com/torvalds/linux](https://github.com/torvalds/linux)
+このコースでは、次のトピックについて説明されています:
 
-Linux is a kernel and and not a complete operating system. Linux kernel is combined with GNU system to make a complete operating system. Therefore, linux based operating systems are also called as GNU/Linux systems. GNU is an extensive collection of free softwares like compiler, debugger, C library etc.
-[Linux and the GNU  System](https://www.gnu.org/gnu/linux-and-gnu.en.html)
+-  [Linux 入門](https://linkedin.github.io/school-of-sre/level101/linux_basics/intro/)
+    -  [Linux オペレーティングシステムって何?](https://linkedin.github.io/school-of-sre/level101/linux_basics/intro/#what-are-linux-operating-systems)
+    -  [ポピュラーな Linux ディストリビューション](https://linkedin.github.io/school-of-sre/level101/linux_basics/intro/#what-are-popular-linux-distributions)
+    -  [Linux の使われ方](https://linkedin.github.io/school-of-sre/level101/linux_basics/intro/#uses-of-linux-operating-systems)
+    -  [Linux のアーキテクチャ](https://linkedin.github.io/school-of-sre/level101/linux_basics/intro/#linux-architecture)
+    -  [GUI と CLI](https://linkedin.github.io/school-of-sre/level101/linux_basics/intro/#graphical-user-interface-gui-vs-command-line-interface-cli)
+-  [コマンドの基礎](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/)
+    -  [仮想環境の準備](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#lab-environment-setup)
+    -  [コマンドって何?](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#what-is-a-command)
+    -  [ファイルシステムの構造](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#file-system-organization)
+    -  [ファイルシステム中を移動する](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#commands-for-navigating-the-file-system)
+    -  [ファイルを操作する](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#commands-for-manipulating-files)
+    -  [ファイルを閲覧する](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#commands-for-viewing-files)
+    -  [Echo コマンド](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#echo-command)
+    -  [文字列操作のコマンド](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#text-processing-commands)
+    -  [I/O リダイレクション (パイプ)](https://linkedin.github.io/school-of-sre/level101/linux_basics/command_line_basics/#io-redirection)
+-  [Linux システムの管理](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/)
+    -  [仮想環境の整備](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#lab-environment-setup)
+    -  [ユーザー/グループの管理](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#usergroup-management)
+    -  [スーパーユーザーになろう](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#becoming-a-superuser)
+    -  [ファイルのパーミッション](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#file-permissions)
+    -  [SSH コマンド](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#ssh-command)
+    -  [パッケージ管理](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#package-management)
+    -  [プロセス管理](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#process-management)
+    -  [メモリ管理](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#memory-management)
+    -  [デーモンと Systemd](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#daemons)
+    -  [ログ](https://linkedin.github.io/school-of-sre/level101/linux_basics/linux_server_administration/#logs)
+-  [おわりに](https://linkedin.github.io/school-of-sre/level101/linux_basics/conclusion)
+    -  [SRE の役割における適用](https://linkedin.github.io/school-of-sre/level101/linux_basics/conclusion/#applications-in-sre-role)
+    -  [便利なコースとチュートリアル集](https://linkedin.github.io/school-of-sre/level101/linux_basics/conclusion/#useful-courses-and-tutorials)
 
-History of Linux -
-[https://en.wikipedia.org/wiki/History_of_Linux](https://en.wikipedia.org/wiki/History_of_Linux)
+## Linux オペレーティングシステムって何?
 
-## What are popular Linux distributions
+私たちのほとんどは、75% 以上の PC で利用されている Windows OS を知っています。Windows オペレーティングシステムは、Windows NT カーネルに基づいています。カーネルは OS の最も重要な部分であり、プロセス管理、メモリ管理、ファイルシステムの管理などの重要な機能を実行します。
 
-A Linux distribution(distro) is an operating system based on
-the Linux kernel and a package management system. A package management
-system consists of tools that help in installing, upgrading,
-configuring and removing softwares on the operating system.
+Linux オペレーティングシステムは、Linux カーネルに基づいています。Linux ベースのオペレーティングシステムは、Linux カーネル、GUI / CLI、システムライブラリ、およびシステムユーティリティで構成されます。Linux カーネルは Linus Torvalds 氏によって独自に開発・リリースされました。Linux カーネルあ無償でオープンソースです。- [https://github.com/torvalds/linux](https://github.com/torvalds/linux)
 
-Software are usually adopted to a distribution and are packaged in a
-distro specific format. These packages are available through a distro
-specific repository. Packages are installed and managed in the operating
-system by a package manager.
+Linux はカーネルであって、完全なオペレーティングシステムではありません。Linux カーネルは GNU システムと組み合わせられることにより、完全なオペレーティングシステムを構成します。そのため、Linux ベースのオペレーティングシステムは GNU/Linux システムとも呼ばれます。GNU はコンパイラ、デバッガ、C言語ライブラリなどのフリーソフトウェアの広範なコレクションです。
 
-**List of popular Linux distributions:**
+[LinuxとGNUシステム](https://www.gnu.org/gnu/linux-and-gnu.ja.html)
+
+Linux の歴史 -
+[https://ja.wikipedia.org/wiki/Linuxの歴史](https://ja.wikipedia.org/wiki/Linux%E3%81%AE%E6%AD%B4%E5%8F%B2)
+
+## ポピュラーな Linux ディストリビューション
+
+Linux ディストリビューション (ディストロ) は、Linux カーネルとパッケージ管理システムに基づくオペレーティングシステムです。パッケージ管理システムは、OS 上のソフトウェアのインストール、アップグレード、設定、および削除に役立つツールで構成されます。
+
+ソフトウェアは通常、ディストリビューションに採用され、ディストリビューション固有の形式でパッケージ化されます。これらのパッケージは、ディストリビューション固有のリポジトリから入手できます。パッケージは、パッケージマネージャーによって OS にインストールおよび管理されます。
+
+**ポピュラーな Linux ディストリビューションの一例:**
 
 - Fedora
 
@@ -114,67 +97,50 @@ system by a package manager.
 - Arch Linux
 
 
-| Packaging systems      | Distributions                              | Package manager
-| ---------------------- | ------------------------------------------ | -----------------
-| Debian style (.deb)    |   Debian, Ubuntu                          |   APT
-| Red Hat style (.rpm)   |   Fedora, CentOS, Red Hat Enterprise Linux |  YUM
+| パッケージ形式      | ディストリビューション                              | パッケージマネージャー |
+| ---------------------- | ------------------------------------------ | -----------------|
+| Debian 形式 (.deb)    |   Debian, Ubuntu                          |   APT|
+| Red Hat 方式 (.rpm)   |   Fedora, CentOS, Red Hat Enterprise Linux |  YUM|
 
-## Linux Architecture
+## Linux のアーキテクチャ
 
 ![](images/linux/commands/image25.png)
 
-- The Linux kernel is monolithic in nature.
+- Linux カーネルは本質的にモノリシック (一枚岩) なカーネルです。
+[https://ja.wikipedia.org/wiki/モノリシックカーネル](https://ja.wikipedia.org/wiki/%E3%83%A2%E3%83%8E%E3%83%AA%E3%82%B7%E3%83%83%E3%82%AF%E3%82%AB%E3%83%BC%E3%83%8D%E3%83%AB)
+- システムコールは、Linux カーネル空間とのやりとりに使用されます。
+- カーネルコードは、カーネルモードでのみ実行されます。非カーネルコードは、ユーザーモードで実行されます。
+- デバイスドライバーは、ハードウェアデバイスとの通信に使用されます。
 
-- System calls are used to interact with the Linux kernel space.
+## Linux の使われ方
 
-- Kernel code can only be executed in the kernel mode. Non-kernel code is executed in the user mode.
+Linux カーネルベースの OS は以下のような例で広く利用されています:
 
-- Device drivers are used to communicate with the hardware devices.
+- パーソナルコンピュータ
 
-## Uses of Linux Operating Systems
+- サーバー
 
-Operating system based on Linux kernel are widely used in:
+- 携帯電話 - Android は Linux オペレーティングシステムベースです
 
-- Personal computers
+- 組み込みデバイス - 時計, テレビ, 信号機など
 
-- Servers
+- 人工衛星
 
-- Mobile phones - Android is based on Linux operating system
+- ネットワーク機器 - ルーター, スイッチなど
 
-- Embedded devices - watches, televisions, traffic lights etc
+## GUI と CLI
 
-- Satellites
+ユーザーは、ユーザーインターフェイスを使用してコンピューターと対話します。ユーザインターフェイスは、GUI または CLI のいずれかです。
 
-- Network devices - routers, switches etc.
+GUI (Graphical User Interface: グラフィカルユーザーインターフェイス) は、ユーザがアイコンや画像などのグラフィックスを使用してコンピュータと対話することを可能にします。ユーザーがアイコンをクリックしてコンピューター上のアプリケーションを開くとき、実際には GUI を使用しています。GUI を使用すると簡単にタスクを実行できます。
 
-## Graphical user interface (GUI) vs Command line interface (CLI)
+CLI (Command Line Interface: コマンドラインインターフェイス) を使用すると、ユーザーはコマンドを使用してコンピューターと対話します。ユーザーがターミナルにコマンドを入力すると、システムはこれらのコマンドの実行を支援します。GUI を使用した経験のある CLI 新入りユーザーは、特定の操作を実行するためのコマンドを知っている必要があるため、CLI との対話が困難になる場合があります。
 
-A user interacts with a computer with the help of user interfaces. The
-user interface can be either GUI or CLI.
+## シェルとターミナル
 
-Graphical user interface allows a user to interact with the computer
-using graphics such as icons and images. When a user clicks on an icon
-to open an application on a computer, he or she is actually using the
-GUI. It's easy to perform tasks using GUI.
+シェルは、ユーザーからコマンドを受け取り、それをオペレーティングシステムに渡して処理させるプログラムです。シェルは CLI の一例です。Bash は Linux サーバで利用できる最も人気のあるシェルプログラムの1つです。他の人気のあるシェルプログラムとして、zsh、ksh、tcsh などがあります。
 
-Command line interface allows a user to interact with the computer using
-commands. A user types the command in a terminal and the system helps in
-executing these commands. A new user with experience on GUI may find it 
-difficult to interact with CLI as he/she needs to be aware of the commands
-to perform a particular operation.
+ターミナル (端末) は、ウィンドウを開き、シェルと対話できるようにするプログラムです。よく使われるターミナルの例としては、gnome-terminal、xterm、konsoleなどがあります。
 
-## Shell vs Terminal
+Linux ユーザーは、シェル、ターミナル、プロンプト、コンソールなどの用語を同じ意味で使います。簡単に言うと、これらはすべてユーザーからコマンドを受け取る方法のことを意味しています。
 
-Shell is a program that takes commands from the
-users and gives them to the operating system for processing. Shell is an
-example of a CLI (command line interface). Bash is one of the most popular shell
-programs available on Linux servers. Other popular shell programs are
-zsh, ksh and tcsh.
-
-Terminal is a program that opens a window and lets you interact with the
-shell. Some popular examples of terminals are gnome-terminal, xterm,
-konsole etc.
-
-Linux users do use the terms shell, terminal, prompt, console etc.
-interchangeably. In simple terms, these all refer to a way of taking
-commands from the user.

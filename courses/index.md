@@ -16,8 +16,8 @@ SRE 初心者として習得しなければならない基本的なスキルセ�
 このコースでは、強力な基礎スキルの構築に重点を置いています。このコースは、より多くの実例を提供するよう作られており、これらの各トピックを学習することが、SRE の日常の職責においてどのように重要な役割を果たすことができるかを示しています。現在、私たちは SRE の学び舎の下で以下のトピックをカバーしています。(訳注: タイトルが日本語になっている箇所についてのみ翻訳済)
 
 -   Level 101
-    -   Fundamentals Series
-        -   [Linux Basics](https://linkedin.github.io/school-of-sre/level101/linux_basics/intro/)
+    -   基礎シリーズ
+        -   [Linux の基礎](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/intro/)
         -   [Git](https://linkedin.github.io/school-of-sre/level101/git/git-basics/)
         -   [Linux Networking](https://linkedin.github.io/school-of-sre/level101/linux_networking/intro/)
     -   [Python and Web](https://linkedin.github.io/school-of-sre/level101/python_web/intro/)
@@ -39,7 +39,7 @@ SRE 初心者として習得しなければならない基本的なスキルセ�
     -   [System troubleshooting and performance improvements](https://linkedin.github.io/school-of-sre/level102/system_troubleshooting_and_performance/introduction/) 
     -   [Continuous Integration and Continuous Delivery](https://linkedin.github.io/school-of-sre/level102/continuous_integration_and_continuous_delivery/introduction/)
 
-継続的な学習は、スキルセットを拡大するために、より深い知識とスキル・能力を獲得するのに役立つと考えています。すべてのモジュールには、さらに学習するためのガイドとなるリファレンスが追加されています。これらのモジュールを使用することで、Site Reliability Engineer に必要な基本的なスキルを構築できることを望んでいます。
+継続的な学習は、スキルセットを拡大するため、より深い知識とスキル・能力を獲得するのに役立つと考えています。すべてのモジュールには、さらに学習するためのガイドとなるリファレンスが追加されています。これらのモジュールを使用することで、Site Reliability Engineer に必要な基本的なスキルを構築できることを望んでいます。
 
 LinkedInではこのカリキュラムを使用し、従来とは異なる採用者や新卒者を SRE として迎え入れています。私たちは、新しい従業員との成功したオンボーディング経験 (新人研修) を何度も経験し、このコースは彼らが非常に短期間で生産的になるのに役立ちました。そこで、他の組織が新しいエンジニアを SRE の役職に追加するのを支援するためのコンテンツをオープンソース化し、これに参加する意欲のある個人へのガイダンスを提供することにしました。私達が作成した最初のコンテンツは出発点に過ぎず、コミュニティがコンテンツの洗練と発展に協力できることを願っています。詳しくは本リポジトリの [コントリビュートに関するガイド](./CONTRIBUTING.md) を参照してください。
 
