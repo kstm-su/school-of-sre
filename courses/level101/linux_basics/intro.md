@@ -40,7 +40,7 @@
     -  [仮想環境の準備](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/command_line_basics/#lab-environment-setup)
     -  [コマンドって何?](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/command_line_basics/#what-is-a-command)
     -  [ファイルシステムの構造](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/command_line_basics/#file-system-organization)
-    -  [ファイルシステム中を移動する](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/command_line_basics/#commands-for-navigating-the-file-system)
+    -  [ファイルシステム内を移動する](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/command_line_basics/#commands-for-navigating-the-file-system)
     -  [ファイルを操作する](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/command_line_basics/#commands-for-manipulating-files)
     -  [ファイルを閲覧する](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/command_line_basics/#commands-for-viewing-files)
     -  [Echo コマンド](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/command_line_basics/#echo-command)
@@ -65,7 +65,7 @@
 
 私たちのほとんどは、75% 以上の PC で利用されている Windows OS を知っています。Windows オペレーティングシステムは、Windows NT カーネルに基づいています。カーネルは OS の最も重要な部分であり、プロセス管理、メモリ管理、ファイルシステムの管理などの重要な機能を実行します。
 
-Linux オペレーティングシステムは、Linux カーネルに基づいています。Linux ベースのオペレーティングシステムは、Linux カーネル、GUI / CLI、システムライブラリ、およびシステムユーティリティで構成されます。Linux カーネルは Linus Torvalds 氏によって独自に開発・リリースされました。Linux カーネルあ無償でオープンソースです。- [https://github.com/torvalds/linux](https://github.com/torvalds/linux)
+Linux オペレーティングシステムは、Linux カーネルに基づいています。Linux ベースのオペレーティングシステムは、Linux カーネル、GUI / CLI、システムライブラリ、およびシステムユーティリティで構成されます。Linux カーネルは Linus Torvalds 氏によって独自に開発・リリースされました。Linux カーネルは無償でオープンソースです。- [https://github.com/torvalds/linux](https://github.com/torvalds/linux)
 
 Linux はカーネルであって、完全なオペレーティングシステムではありません。Linux カーネルは GNU システムと組み合わせられることにより、完全なオペレーティングシステムを構成します。そのため、Linux ベースのオペレーティングシステムは GNU/Linux システムとも呼ばれます。GNU はコンパイラ、デバッガ、C言語ライブラリなどのフリーソフトウェアの広範なコレクションです。
 
