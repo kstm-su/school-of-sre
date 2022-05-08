@@ -1,64 +1,64 @@
-# Command Line Basics
+# コマンドラインの基礎
 
-## Lab Environment Setup
+## 仮想環境の準備
 
-One can use an online bash interpreter to run all the commands that are provided as examples in this course. This will also help you in getting a hands-on experience of various linux commands.
+オンラインの bash インタプリタを利用すると、本コースで例として提供されている全てのコマンドを実行することができます。これは、様々な Linux コマンドの実際の体験に役立ちます。
 
-[REPL](https://repl.it/languages/bash) is one of the popular online bash interpreters for running linux commands. We will be using it for running all the commands mentioned in this course.
+[REPL](https://repl.it/languages/bash) は Linux コマンドを実行するための bash インタプリタの一つです。本コースで説明するコマンドは、REPL 上で実行したものです。
 
-## What is a Command
+## コマンドって何?
 
-A command is a program that tells the operating system to perform
-specific work. Programs are stored as files in linux. Therefore, a
-command is also a file which is stored somewhere on the disk.
+コマンドは、特定の作業を実行するようOS に指示を与えるプログラムです。プログラムは Linux 内においてはファイルとして保存されます。つまり、コマンドはディスク上のどこかに格納されているファイルでもあります。
 
-Commands may also take additional arguments as input from the user.
-These arguments are called command line arguments. Knowing how to use
-the commands is important and there are many ways to get help in Linux,
-especially for commands. Almost every command will have some form of
-documentation, most commands will have a command-line argument -h or
-\--help that will display a reasonable amount of documentation. But the
-most popular documentation system in Linux is called man pages - short
-for manual pages.
+コマンドはユーザーからの入力として追加の引数を受け取る場合もあります。これらの引数は、コマンドライン引数と呼ばれます。コマンドの使い方を知っておくことは重要です。Linux でヘルプを得る方法はたくさんあります。ほぼ全てのコマンドには何らか形式のドキュメントと、ヘルプを見るためのコマンドライン引数 `-h` または `--help` があり、ちょうどよい量のドキュメントを見ることができます。しかし、Linux で最も一般的なドキュメンテーションのシステムは、マニュアルページ、略して `man` ページと呼ばれるものです。
 
-Using \--help to show the documentation for ls command.
+`--help` を使用して`ls` コマンドのドキュメントを見る実例:
 
 ![](images/linux/commands/image19.png)
 
-## File System Organization
+### 簡単な実例を見るためのコマンド (日本語版オリジナル)
 
-The linux file system has a hierarchical (or tree-like) structure with
-its highest level directory called root ( denoted by / ). Directories
-present inside the root directory stores file related to the system.
-These directories in turn can either store system files or application
-files or user related files.
+> この項目は日本語版オリジナルのコンテンツです。元の linkedin/school-of-sre には存在しない内容です。
+
+日本語話者にとって、`man` コマンドは大抵の場合には詳しすぎ、`-h` や `--help` も、実例が無く分かりにくい場合があります。
+
+ここでおすすめなのは `tldr` パッケージによって追加される `tldr` コマンドなどの、よく使われる実例をシンプルに表示してくれるコマンドです。本コマンドを活用するには、どのコマンドでどのようなことができるかを知っている必要がありますが、コマンド名を知っていて、細かいオプションを忘れてしまった場合に有用です。このようなコマンドには、`tldr` の他に、などがあります。これらは一般的な Linux ディストリビューションに最初からは入っていないため、それぞれ、`apt` や `yum` コマンドを使用して自分でインストールする必要があります。
+
+`tldr` を使用して `find` コマンドの実例を見る:
+
+![Screenshot from 2022-05-08 13-05-46](/home/passerby1/Pictures/Screenshots/Screenshot from 2022-05-08 13-05-46.png)
+
+コマンドのオプションについて詳しく知る必要がある場合は、`man` を参照すると良いでしょう。
+
+## ファイルシステムの構造
+
+Linux のファイルシステムは最上位の「ルート (`/` で示される)」ディレクトリ (フォルダ) の下にディレクトリ・ファイルが連なる階層構造 (木構造・ツリー構造) になっています。ルートディレクトリ直下にあるディレクトリには、システムに関連するファイルが格納されます。これら下位のディレクトリには、システムファイル、アプリケーションファイル、ユーザー関連のファイルが格納されます。
 
 ![](images/linux/commands/image17.png)
-  
-  bin   | The executable program of most commonly used commands reside in bin directory  
-  
-  sbin  | This directory contains programs used for system administration.
-  
-  home  | This directory contains user related files and directories.
-  
-  lib   | This directory contains all the library files
-  
-  etc   | This directory contains all the system configuration files
-  
-  proc  | This directory contains files related to the running processes on the system
-  
-  dev   | This directory contains files related to devices on the system
-  
-  mnt   | This directory contains files related to mounted devices on the system
-  
-  tmp   | This directory is used to store temporary files on the system
-  
-  usr   |  This directory is used to store application programs on the system
 
-## Commands for Navigating the File System
+  bin   | 最もよく使用されるコマンドの実行可能プログラムファイルは、bin ディレクトリに格納されています。
 
-There are three basic commands which are used frequently to navigate the
-file system:
+  sbin  | システム管理に利用するプログラムが格納されています。
+
+  home  | ユーザー関連のファイルおよびディレクトリが格納されています。
+
+  lib   | 全てのライブラリファイルが格納されています。
+
+  etc   | 全てのシステム構成ファイルが格納されます。
+
+  proc  | システム上で実行中のプロセスに関連するファイルが格納されています。
+
+  dev   | システム上のデバイスに関連するファイルが格納されています。
+
+  mnt   | システムにマウントされたデバイスに関するファイルが格納されています。
+
+  tmp   | システム上の一時ファイルを格納するために使用されます。
+
+  usr   |  システム上のアプリケーションプログラムを格納するために使用されます。
+
+## ファイルシステム内を移動する
+
+ファイルシステム内の移動のため頻繁に使用される3つの基本的なコマンドを紹介します:
 
 - ls
 
@@ -66,52 +66,37 @@ file system:
 
 - cd
 
-We will now try to understand what each command does and how to use
-these commands. You should also practice the given examples on the
-online bash shell.
+ここからは各コマンドの機能と使い方について説明します。各コマンド例をオンラインの bash シェルで実行し、練習することもできます。
 
-### pwd (print working directory)
+### pwd (print working directory: 現在のディレクトリのパスを表示)
 
-At any given moment of time, we will be standing in a certain directory.
-To get the name of the directory in which we are standing, we can use
-the pwd command in linux.
+どの瞬間にも、私たちはどこか特定のディレクトリに立っています。現在立っているディレクトリの名前を取得するには、Linux で `pwd` コマンドを実行します。
 
 ![](images/linux/commands/image2.png)
 
-We will now use the cd command to move to a different directory and then
-print the working directory.
+次に、`cd` コマンドを使用して別のディレクトリに移動し、移動後の作業ディレクトリを表示します。
 
 ![](images/linux/commands/image20.png)
 
-### cd (change directory)
+### cd (change directory: ディレクトリを移動)
 
-The cd command can be used to change the working directory. Using the
-command, you can move from one directory to another.
-
-In the below example, we are initially in the root directory. we have
-then used the cd command to change the directory.
+`cd` コマンドを使用すると作業ディレクトリを変更することができます。次の例のように、あるディレクトリから別のディレクトリへと移動することができます。次の例では、`cd` コマンドを用いてルートディレクトリから移動しました。
 
 ![](images/linux/commands/image3.png)
 
-### ls (list files and directories)**
+### ls (list files and directories: ファイルとディレクトリのリスト表示)
 
-The ls command is used to list the contents of a directory. It will list
-down all the files and folders present in the given directory.
-
-If we just type ls in the shell, it will list all the files and
-directories present in the current directory.
+`ls ` コマンドは、ディレクトリの内容を表示するために使用します。指定したディレクトリに存在する全てのファイルとフォルダが一覧表示されます。シェルにおいて、単に `ls` と入力すると、現在のディレクトリに存在するファイルとフォルダーが一覧表示されます。(隠しファイル・隠しフォルダを含めた全てのファイル・ディレクトリを表示するには `-a`  オプションを使用する必要があります。)
 
 ![](images/linux/commands/image7.png)
 
-We can also provide the directory name as argument to ls command. It
-will then list all the files and directories inside the given directory.
+`ls` コマンドの引数としてディレクトリ名を指定することもできます。指定されたディレクトリにあるファイル・ディレクトリが表示されます。
 
 ![](images/linux/commands/image4.png)
 
-## Commands for Manipulating Files
+## ファイルを操作する
 
-There are five basic commands which are used frequently to manipulate
-files:
+ファイルの操作のため頻繁に使用される5つの基本コマンドを紹介します:
 
 - touch
 
@@ -123,17 +108,13 @@ files:
 
 - rm
 
-We will now try to understand what each command does and how to use
-these commands. You should also practice the given examples on the
-online bash shell.
+ここからは各コマンドの機能と使い方について説明します。各コマンド例をオンラインの bash シェルで実行し、練習することもできます。
 
-### touch (create new file)
+### touch (create new file: 新しいファイルを作成)
 
-The touch command can be used to create an empty new file.
-This command is very useful for many other purposes but we will discuss
-the simplest use case of creating a new file.
+`touch` コマンドを使用すると、空の新規ファイルを作成することができます。`touch` コマンドは、他の用途 (ファイルのタイムスタンプの更新など) でも多く使用されますが、ここでは、新規ファイルの作成における使用例のみについて説明します。
 
-General syntax of using touch command
+`touch` コマンドの一般的な構文:
 
 ```
 touch <file_name>
@@ -141,12 +122,11 @@ touch <file_name>
 
 ![](images/linux/commands/image9.png)
 
-### mkdir (create new directories)
+### mkdir (create new directories: 新しいディレクトリを作成)
 
-The mkdir command is used to create directories.You can use ls command
-to verify that the new directory is created.
+`mkdir` コマンドは、ディレクトリの作成に使用されます。`ls` コマンドを使用することによって、新しいディレクトリが作成されたことの確認ができます。
 
-General syntax of using mkdir command
+`mkdir` コマンドの一般的な構文:
 
 ```
 mkdir <directory_name>
@@ -154,99 +134,70 @@ mkdir <directory_name>
 
 ![](images/linux/commands/image11.png)
 
-### rm (delete files and directories)
+### rm (delete files and directories: ファイル・ディレクトリを削除)
 
-The rm command can be used to delete files and directories. It is very
-important to note that this command permanently deletes the files and
-directories. It's almost impossible to recover these files and
-directories once you have executed rm command on them successfully. Do
-run this command with care.
+`rm` コマンドを使用すると、ファイルとディレクトリを削除することができます。このコマンドは、ファイルとディレクトリを完全に削除しますので注意してください。ファイルやディレクトリに対して `rm` コマンドを実行した場合、復元はほとんど不可能です。注意して実行してください。
 
-General syntax of using rm command:
+`rm` コマンドの一般的な構文:
 
 ```
 rm <file_name>
 ```
 
-Let's try to understand the rm command with an example. We will try to
-delete the file and directory we created using touch and mkdir command
-respectively.
+例を使って `rm` コマンドを理解してみましょう。`touch` コマンドと `mkdir` コマンドで作成したファイルとディレクトリの削除を行っています。
 
 ![](images/linux/commands/image18.png)
 
-### cp (copy files and directories)
+### cp (copy files and directories: ファイル・ディレクトリをコピー)
 
-The cp command is used to copy files and directories from one location
-to another. Do note that the cp command doesn't do any change to the
-original files or directories. The original files or directories and
-their copy both co-exist after running cp command successfully.
+`cp` コマンドは、ファイルとディレクトリを別の場所にコピーするために使用されます。`cp` コマンドは、元のファイルやディレクトリを変更しません。`cp` コマンドが正常に実行されると、元のファイル・ディレクトリとそのコピーの両方が別々に存在することになります。
 
-General syntax of using cp command:
+`cp` コマンドの一般的な構文:
 
 ```
 cp <source_path> <destination_path>
 ```
 
-We are currently in the '/home/runner' directory. We will use the mkdir
-command to create a new directory named "test_directory". We will now
-try to copy the "\_test_runner.py" file to the directory we created just
-now.
+現在は `/home/runner` ディレクトリにいます。`mkdir` コマンドを使用して、`test_directory` という名前の新規ディレクトリを作成した後、`_test_runner.py` ファイルを、先程作成したディレクトリにコピーします。 
 
 ![](images/linux/commands/image23.png)
 
-Do note that nothing happened to the original "\_test_runner.py" file.
-It's still there in the current directory. A new copy of it got created
-inside the "test_directory".
+元の `_test_runner.py` ファイルには何も起こらず、現在のディレクトリに引き続き存在したままです。この元のファイルのコピーが `test_directory` 内に作成されました。
 
 ![](images/linux/commands/image14.png)
 
-We can also use the cp command to copy the whole directory from one
-location to another. Let's try to understand this with an example.
+`cp` コマンドを使用すると、ディレクトリ全体をある場所から別の場所へコピーすることもできます。例を使って理解してみましょう。
 
 ![](images/linux/commands/image12.png)
 
-We again used the mkdir command to create a new directory called
-"another_directory". We then used the cp command along with an
-additional argument '-r' to copy the "test_directory".
+ここでも `mkdir` コマンドを使用して、`another_directory` という新しいディレクトリを作成しました。次に、`cp` コマンドと追加の引数 `-r` を使用して、`test_directory` をコピーしています。
 
-**mv (move files and directories)**
+**mv (move files and directories: ファイル・ディレクトリを移動)**
 
-The mv command can either be used to move files or directories from one
-location to another or it can be used to rename files or directories. Do
-note that moving files and copying them are very different. When you
-move the files or directories, the original copy is lost.
+`mv` コマンドは、ファイル・ディレクトリを他の場所へ移動するため、また、ファイル・ディレクトリの名前を変更するために使用します。ファイルの移動とコピーは大きく異なります。ファイル・ディレクトリを移動すると、コピー元のファイルは失われます。
 
-General syntax of using mv command:
+`mv` コマンドの一般的な構文:
 
 ```
 mv <source_path> <destination_path>
 ```
 
-In this example, we will use the mv command to move the
-"\_test_runner.py" file to "test_directory". In this case, this file
-already exists in "test_directory". The mv command will just replace it.
-**Do note that the original file doesn't exist in the current directory
-after mv command ran successfully.**
+以下の例では、`mv` コマンドを使用して `_test_runner.py` ファイルを `test_directory` に移動しています。この場合、移動先の `test_directory` に同名のファイルが既に存在しているので、`mv` コマンドはこれを置き換えました。
+**`mv` コマンドが正常に実行された後、元のファイルが削除されていることに注意してください。**
 
 ![](images/linux/commands/image26.png)
 
-We can also use the mv command to move a directory from one location to
-another. In this case, we do not need to use the '-r' flag that we did
-while using the cp command. Do note that the original directory will not
-exist if we use mv command.
+また、`mv` コマンドを使用しても、別の場所にディレクトリを移動することができます。この場合、`cp` コマンドの使用時に利用した `-r` フラグを使う必要はありません。`mv` コマンドの使用後、元のディレクトリが消えていることに注意してください。
 
-One of the important uses of the mv command is to rename files and
-directories. Let's see how we can use this command for renaming.
+`mv` コマンドの使い方の一つとして、ファイル・ディレクトリ名の変更があります。使い方を見てみましょう。
 
-We have first changed our location to "test_directory". We then use the
-mv command to rename the ""\_test_runner.py" file to "test.py".
+以下の例ではまず、`test_directory` に移動しました。次に、`mv` コマンドを使用して、`_test_runner.py` ファイルの名前を `test.py` に変更しています。
 
 ![](images/linux/commands/image29.png)
 
-## Commands for Viewing Files
+## ファイルを閲覧する
 
-There are five basic commands which are used frequently to view the
-files:
+ファイルの閲覧のため頻繁に使用される5つの基本コマンドを紹介します:
 
 - cat
 
@@ -258,108 +209,76 @@ files:
 
 - less
 
-We will now try to understand what each command does and how to use
-these commands. You should also practice the given examples on the
-online bash shell.
+ここからは各コマンドの機能と使い方について説明します。各コマンド例をオンラインの bash シェルで実行し、練習することもできます。
 
-We will create a new file called "numbers.txt" and insert numbers from 1
-to 100 in this file. Each number will be in a separate line.
+以下で用いるため、`numbers.txt` という新しいファイルを作成し、このファイルに1から100 までの数字を挿入します。各数字は1行ずつ記載されています。
 
 ![](images/linux/commands/image21.png)
 
-Do not worry about the above command now. It's an advanced command which
-is used to generate numbers. We have then used a redirection operator to
-push these numbers to the file. We will be discussing I/O redirection in the
-later sections.
+上記のコマンドの意味について今は気にする必要はありません。これは高度なコマンドで、数値を生成するために使用されるコマンドとリダイレクト演算子を使用して、番号をファイルにプッシュしました。I/O リダイレクションについては、後のセクションで説明します。
 
 
 ### cat
 
-The most simplest use of cat command is to print the contents of the file on
-your output screen. This command is very useful and can be used for many
-other purposes. We will study about other use cases later.
+`cat` コマンドの最も簡単な使い方は、ファイルの内容を表示することです。このコマンドは非常に便利で、多くの目的で使用することができます。他のユースケースについては、後で説明します。
 
 ![](images/linux/commands/image1.png)
 
-You can try to run the above command and you will see numbers being
-printed from 1 to 100 on your screen. You will need to scroll up to view
-all the numbers.
+上記コマンドを実行すると、1から100までの数字が画面に表示されます。すべての番号を確認するには、上にスクロールする必要があります。
 
 ### head
 
-The head command displays the first 10 lines of the file by default. We
-can include additional arguments to display as many lines as we want
-from the top.
-
-In this example, we are only able to see the first 10 lines from the
-file when we use the head command.
+`head` コマンドは、デフォルトではファイルの最初の10行を表示します。ファイルの上から必要な行数を表示するため、追加の引数を用いることもできます。以下の例では、`head` コマンドを使用し、ファイル最初の10行のみが表示されています。
 
 ![](images/linux/commands/image15.png)
 
-By default, head command will only display the first 10 lines. If we
-want to specify the number of lines we want to see from start, use the
-'-n' argument to provide the input.
+ファイル最初の10行だけではなく、ファイル先頭から見たい行数を指定する場合は、`-n` 引数を用いて行数を指定します。
 
 ![](images/linux/commands/image16.png)
 
 ### tail
 
-The tail command displays the last 10 lines of the file by default. We
-can include additional arguments to display as many lines as we want
-from the end of the file.
+`tail` コマンドは、デフォルトではファイルの最後の10行を表示します。ファイルの末尾から必要な行数を表示するため、追加の引数を用いることもできます。以下の例では、`tail` コマンドを使用し、ファイル最後の10行のみが表示されています。
 
 ![](images/linux/commands/image22.png)
 
-By default, the tail command will only display the last 10 lines. If we
-want to specify the number of lines we want to see from the end, use '-n'
-argument to provide the input.
+ファイル末尾の10行だけではなく、ファイル末尾から見たい行数を指定する場合は、`-n` 引数を用いて行数を指定します。
 
 ![](images/linux/commands/image10.png)
 
-In this example, we are only able to see the last 5 lines from the file
-when we use the tail command with explicit -n option.
+上記の例では、`-n` オプションを使用しファイル最後の5行のみを表示しています。
 
 
 ### more
 
-More command displays the contents of a file or a command output, 
-displaying one screen at a time in case the file is large (Eg: log files).
-It also allows forward navigation and limited backward navigation in the file.
+`more` コマンドはファイルの内容またはコマンドの出力を表示し、ファイルが大きい場合 (ログファイルなど) は一度に一画面ずつ表示します。また、ファイル内での前方への移動と限定的な後方への移動が可能です。
 
 ![](images/linux/commands/image33.png)
 
-More command displays as much as can fit on the current screen and waits for user input to advance. Forward navigation can be done by pressing Enter, which advances the output by one line and Space, which advances the output by one screen.
+`more` コマンドはファイルを現在の画面に収まるだけ表示し、ユーザー入力によりスクロールされるのを待ちます。前方へのスクロールは、Enter キーで1行進み、Space キーで1画面分出力が進みます。
 
 ### less
 
-Less command is an improved version of more. It displays the contents of a file or a command output, one page at a time.
-It allows backward navigation as well as forward navigation in the file and also has search options. We can use arrow keys for advancing backward or forward by one line. For moving forward by one page, press Space and for moving backward by one page, press b on your keyboard.
-You can go to the beginning and the end of a file instantly.
+`less` コマンドは、`more` コマンドの改良版です。`less` コマンドはファイルまたはコマンド出力の内容を1ページずつ表示します。これにより、ファイル内での前方・後方への自由な移動が可能となり、検索オプションもあります。矢印キーにより、1行分ずつ前後に進むことができます。Space キーを押すと1ページ分進み、b キーを押すと1ページ分前に戻ります。また、g キー、G (g + Shift) キーにより、ファイルの先頭と末尾へ瞬時に移動することも可能です。
 
 
-## Echo Command in Linux
+## Echo コマンド
 
-The echo command is one of the simplest commands that is used in the
-shell. This command is equivalent to what we have <print> in other
-programming languages.
-
-The echo command prints the given input string on the screen.
+`echo` コマンドはシェルで使用される最も単純なコマンドのひとつです。このコマンドは、他のプログラミング言語における <print> に相当するもので、入力された文字列を画面に出力します。
 
 ![](images/linux/commands/image24.png)
 
-## Text Processing Commands
+## 文字列操作のコマンド
 
-In the previous section, we learned how to view the content of a file.
-In many cases, we will be interested in performing the below operations:
+上記のセクションでは、ファイルの内容を表示する方法について説明しました。多くの場合、次の操作を行うことにも興味があるでしょう。
 
-- Print only the lines which contain a particular word(s)
+- 特定の単語が含まれる行のみを表示する
 
-- Replace a particular word with another word in a file
+- ファイル内の特定の単語を別の単語に置き換える
 
-- Sort the lines in a particular order
+- 何かしらの順序に行を並び替える
 
-There are three basic commands which are used frequently to process
-texts:
+文字列操作のため頻繁に使用される5つの基本コマンドを紹介します:
 
 - grep
 
@@ -367,109 +286,96 @@ texts:
 
 - sort
 
-We will now try to understand what each command does and how to use
-these commands. You should also practice the given examples on the
-online bash shell.
+ここからは各コマンドの機能と使い方について説明します。各コマンド例をオンラインの bash シェルで実行し、練習することもできます。
 
-We will create a new file called "numbers.txt" and insert numbers from 1
-to 10 in this file. Each number will be in a separate line.
+以下で用いるため、`numbers.txt` という新しいファイルを作成し、このファイルに1から10 までの数字を挿入します。各数字は1行ずつ記載されています。
 
 ![](images/linux/commands/image8.png)
 
 ### grep
 
-The grep command in its simplest form can be used to search particular
-words in a text file. It will display all the lines in a file that
-contains a particular input. The word we want to search is provided as
-an input to the grep command.
+`grep` コマンドを最も単純な使い方で使用した場合、テキストファイル内の特定の単語の検索に使用することができます。ファイル内の、入力した内容を含む全ての行が表示されます。検索する単語は、`grep` コマンドへの入力として指定します。
 
-General syntax of using grep command:
+`grep` コマンドの一般的な構文:
 
 ```
 grep <word_to_search> <file_name>
 ```
 
-In this example, we are trying to search for a string "1" in this file.
-The grep command outputs the lines where it found this string.
+以下の例では、ファイルから文字列「1」を検索しようとしています。`grep` コマンドは、この文字列が見つかった行を出力しています。
 
 ![](images/linux/commands/image5.png)
 
 ### sed
 
-The sed command in its simplest form can be used to replace a text in a
-file.
+`sed` コマンドを最も単純な使い方で使用した場合、ファイル内の文字列置換に使用することができます。
 
-General syntax of using the sed command for replacement:
+文字列の置換を行う場合の `sed` コマンドの一般的な構文:
 
 ```
 sed 's/<text_to_replace>/<replacement_text>/' <file_name>
 ```
 
-Let's try to replace each occurrence of "1" in the file with "3" using
-sed command.
+`sed` コマンドを使用して、ファイル内の「1」を「3」に置き換えてみましょう。
 
 ![](images/linux/commands/image31.png)
 
-The content of the file will not change in the above
-example. To do so, we have to use an extra argument '-i' so that the
-changes are reflected back in the file.
+上記の使用例では、置き換えられた後の内容が表示されるだけで、元のファイルは変更されません。元のファイルに対して変更を行うためには、追加の引数 `-i` を用いる必要があります。
 
 ### sort
 
-The sort command can be used to sort the input provided to it as an
-argument. By default, it will sort in increasing order.
+`sort` コマンドを使用すると、引数として与えられた内容を並び替えることができます。デフォルトでは、昇順に並び替えられます。
 
-Let's first see the content of the file before trying to sort it.
+並び替える前の内容を確認してみましょう。
 
 ![](images/linux/commands/image27.png)
 
-Now, we will try to sort the file using the sort command. The sort
-command sorts the content in lexicographical order.
+次に、`sort` コマンドを使用してファイルの内容をソートします。デフォルトでの `sort` コマンドは、行を辞書順に並び替えます。
 
 ![](images/linux/commands/image32.png)
 
-The content of the file will not change in the above
-example.
+上記の使用例では、置き換えられた後の内容が表示されるだけで、元のファイルは変更されません。
 
-## I/O Redirection
+## I/O リダイレクション (パイプ)
 
-Each open file gets assigned a file descriptor. A file descriptor is an
-unique identifier for open files in the system. There are always three
-default files open, stdin (the keyboard), stdout (the screen), and
-stderr (error messages output to the screen). These files can be
-redirected.
+プログラムによって開かれた各ファイルには、ファイルディスクリプタと呼ばれる識別子が割り当てられます。ファイルディスクリプタは、システムにおいて開かれているファイルの一意な識別子です。また、プログラムは常に stdin (標準入力: キーボード)、stdout (標準出力: 画面)、stderr (標準エラー出力: 画面に出力されるエラーメッセージ) の3つのデフォルトファイルを開きます。これらのファイルは、リダイレクトすることができます。
 
 Everything is a file in linux -
 [https://unix.stackexchange.com/questions/225537/everything-is-a-file](https://unix.stackexchange.com/questions/225537/everything-is-a-file)
 
-Till now, we have displayed all the output on the screen which is the
-standard output. We can use some special operators to redirect the
-output of the command to files or even to the input of other commands.
-I/O redirection is a very powerful feature.
+> 日本語における参考文献:
+>
+> 百日半狂乱 - Linuxターミナル、コマンドtips その3: stdin, stderr, stdout, リダイレクト, パイプ
+> [https://doi-t.hatenablog.com/entry/2015/03/29/225239](https://doi-t.hatenablog.com/entry/2015/03/29/225239)
 
-In the below example, we have used the '>' operator to redirect the
-output of ls command to output.txt file.
+これまでは、コマンドの全ての出力を標準出力である画面に表示していました。いくつかの特殊な演算子を使用すると、コマンドの出力先をファイルや他のコマンドへとリダイレクトすることができます。
+I/O リダイレクトは非常に強力な機能です。
+
+次の例では、`>` 演算子を使用して、`ls` コマンドの出力を `output.txt` ファイルにリダイレクトしています。
 
 ![](images/linux/commands/image30.png)
 
-In the below example, we have redirected the output from echo command to
-a file.
+次の例では、`echo` コマンドの出力をファイルにリダイレクトしています。
 
 ![](images/linux/commands/image13.png)
 
-We can also redirect the output of a command as an input to another
-command. This is possible with the help of pipes.
+コマンドの出力を別のコマンドへの入力としてリダイレクトすることもできます。これは、パイプと呼ばれる機能を使用すれば可能です。
+
+次の例では、`cat` コマンドの出力をパイプ (`|`) 演算子を使用して、`grep` コマンドへの入力として渡しています。
 
 In the below example, we have passed the output of cat command as an
 input to grep command using pipe(\|) operator.
 
 ![](images/linux/commands/image6.png)
 
-In the below example, we have passed the output of sort command as an
-input to uniq command using pipe(\|) operator. The uniq command only
-prints the unique numbers from the input.
+次の例では、パイプ (`|`) 演算子を使用して、`sort` コマンドの出力を `uniq` コマンドへ入力として渡しています。`uniq` コマンドは、入力からユニーク (一意) な数字のみを出力します。
 
 ![](images/linux/commands/image28.png)
 
 I/O redirection -
 [https://tldp.org/LDP/abs/html/io-redirection.html](https://tldp.org/LDP/abs/html/io-redirection.html)
+
+> 日本語における参考文献:
+>
+> Riichiro Saito - 入出力の切り換え(I/O redirection)
+> [https://flex.phys.tohoku.ac.jp/texi/sh/node6.html](https://flex.phys.tohoku.ac.jp/texi/sh/node6.html)

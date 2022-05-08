@@ -14,7 +14,7 @@ nav:
     - 基本シリーズ:
         - Linux の基礎:
             - はじめに: level101/linux_basics/intro.md
-            - Command Line Basics: level101/linux_basics/command_line_basics.md
+            - コマンドラインの基礎: level101/linux_basics/command_line_basics.md
             - Server Administration: level101/linux_basics/linux_server_administration.md
             - Conclusion: level101/linux_basics/conclusion.md
         - Git:

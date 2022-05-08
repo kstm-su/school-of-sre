@@ -36,7 +36,7 @@
     -  [Linux の使われ方](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/intro/#uses-of-linux-operating-systems)
     -  [Linux のアーキテクチャ](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/intro/#linux-architecture)
     -  [GUI と CLI](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/intro/#graphical-user-interface-gui-vs-command-line-interface-cli)
--  [コマンドの基礎](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/command_line_basics/)
+-  [コマンドラインの基礎](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/command_line_basics/)
     -  [仮想環境の準備](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/command_line_basics/#lab-environment-setup)
     -  [コマンドって何?](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/command_line_basics/#what-is-a-command)
     -  [ファイルシステムの構造](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/linux_basics/command_line_basics/#file-system-organization)
