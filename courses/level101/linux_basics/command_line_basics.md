@@ -26,7 +26,7 @@
 
 `tldr` を使用して `find` コマンドの実例を見る:
 
-![Screenshot from 2022-05-08 13-05-46](/home/passerby1/Pictures/Screenshots/Screenshot from 2022-05-08 13-05-46.png)
+![](images/linux/commands/Screenshot_tdlr.png)
 
 コマンドのオプションについて詳しく知る必要がある場合は、`man` を参照すると良いでしょう。
 
