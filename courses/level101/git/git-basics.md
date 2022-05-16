@@ -1,27 +1,33 @@
 # Git
 
-## Prerequisites
+## 前提条件
 
-1. Have Git installed [https://git-scm.com/downloads](https://git-scm.com/downloads)
-2. Have taken any git high level tutorial or following LinkedIn learning courses
+1. Gitをインストール [https://git-scm.com/downloads](https://git-scm.com/downloads)
+
+2. Gitの基礎に関するコースを学んだこと
+      
       - [https://www.linkedin.com/learning/git-essential-training-the-basics/](https://www.linkedin.com/learning/git-essential-training-the-basics/)
       - [https://www.linkedin.com/learning/git-branches-merges-and-remotes/](https://www.linkedin.com/learning/git-branches-merges-and-remotes/)
       - [The Official Git Docs](https://git-scm.com/doc)
+      
+      > 日本語における参考文献:
+      >
+      > git - Book (日本語)  https://git-scm.com/book/ja/v2
 
-## What to expect from this course
+## このコースで期待されること
 
-As an engineer in the field of computer science, having knowledge of version control tools becomes almost a requirement. While there are a lot of version control tools that exist today like SVN, Mercurial, etc, Git perhaps is the most used one and this course we will be working with Git. While this course does not start with Git 101 and expects basic knowledge of git as a prerequisite, it will reintroduce the git concepts known by you with details covering what is happening under the hood as you execute various git commands. So that next time you run a git command, you will be able to press enter more confidently!
+コンピュータサイエンス分野のエンジニアには、バージョン管理ツールの知識が必要となります。SVNやMercurialなどのように、現在多くのバージョン管理ツールが使われていますが、Gitはおそらく最も使用されているものです。このコースではGitを学んでいきますが、このコースはGitを一から学ぶものではなく、前提条件としてgitの基本的な知識を前提としています。しかし、さまざまなgitコマンドを実行するときに内部で何が起こっているかを詳しく説明することで、あなたが知っているgitの概念を再紹介します。このコースを経て、次にgitコマンドを実行するときに、自信を持ってEnterキーを押せるようになりましょう。
 
-## What is not covered under this course
+## このコースではカバーしない内容
 
-Advanced usage and specifics of internal implementation details of Git.
+本コースでは、Gitの内部構造や詳細な使い方については取り上げません。
 
 ## Course Contents
 
- 1. [Git Basics](https://linkedin.github.io/school-of-sre/level101/git/git-basics/#git-basics)
- 2. [Working with Branches](https://linkedin.github.io/school-of-sre/level101/git/branches/)
- 3. [Git with Github](https://linkedin.github.io/school-of-sre/level101/git/github-hooks/#git-with-github)
- 4. [Hooks](https://linkedin.github.io/school-of-sre/level101/git/github-hooks/#hooks)
+ 1. [Git Basics](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/git/git-basics/#git-basics)
+ 2. [Working with Branches](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/git/branches/)
+ 3. [Git with Github](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/git/github-hooks/#git-with-github)
+ 4. [Hooks](https://kstm.shinshu-u.ac.jp/school-of-sre/level101/git/github-hooks/#hooks)
 
 ## Git Basics
 
